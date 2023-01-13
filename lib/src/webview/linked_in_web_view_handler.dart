@@ -126,15 +126,15 @@ class _LinkedInWebViewHandlerState extends State<LinkedInWebViewHandler> {
             return NavigationDecision.navigate;
           },
         ),
-      )
-      ..addJavaScriptChannel(
-        'Toaster',
-        onMessageReceived: (JavaScriptMessage message) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(content: Text(message.message)),
-          );
-        },
       );
+    // ..addJavaScriptChannel(
+    //   'Toaster',
+    //   onMessageReceived: (JavaScriptMessage message) {
+    //     ScaffoldMessenger.of(context).showSnackBar(
+    //       SnackBar(content: Text(message.message)),
+    //     );
+    //   },
+    // );
 
     return Scaffold(
       appBar: widget.appBar,
